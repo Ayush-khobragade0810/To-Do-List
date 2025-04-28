@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    /* background: linear-gradient(90deg, rgb(69, 185, 252) 20%, rgba(249, 29, 253, 0.919) 69%); */
+    background: linear-gradient(135deg, rgba(132, 250, 176, 1), rgba(143, 211, 244, 1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.todo-container {
+   
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 320px;
+    text-align: center;
+    position: fixed;
+	width: 400px;
+	height: 440px;
+	background: transparent;
+    border: 1px solid rgba(255,255,255, .5);
+	border-radius: 20px;
+	backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    justify-content: center;
+	align-items: center;
+    background-color: rgb(255, 255, 255);
+	overflow: hidden;
+	transition: height .2s ease;
+	background-position: bottom right;
+    transition: transform .5s ease, height .2s ease;
+	left: 550px;
+	top: 150px;
+}
+
+.input-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+#task-input, #due-date-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #26e75d;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #04f147;
+}
+
+#clear-btn {
+    background-color: rgb(251, 29, 29);
+    margin-top: 15px;
+}
+
+#clear-btn:hover {
+    background-color: rgba(219, 53, 53, 0.919);
+}
+/* 
+ul {
+    list-style-type: none;
+    padding: 0;
+    overflow-y: auto;
+    max-height: 300px;
+} */
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+    scroll-padding-bottom: 30px;
+    scroll-behavior: smooth; /* for soft scrolling */
+}
+
+/* Optional: Nice Scrollbar */
+ul::-webkit-scrollbar {
+    width: 8px;
+}
+ul::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+ul::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+li {
+    background: #eee;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px;
+    position: relative;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: gray;
+}
+
+li span.due-date {
+    display: block;
+    font-size: 12px;
+    color: #888;
+}
+
+li button {
+    margin-left: 5px;
+    padding: 5px;
+    background: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+li button.delete-btn {
+    background: #2839a7;
+}
+
+li button:hover {
+    opacity: 0.9;
+}
